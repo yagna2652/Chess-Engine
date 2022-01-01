@@ -1,0 +1,45 @@
+-- Board representation
+  1. 64 squares
+  2. 32 pieces
+     16(pawns)
+     4(K)
+     4(B)
+     4(R)
+     2(Q)
+     2(K)
+-- State of the board
+-- Win or Loss
+-- Legal Moves
+   1. In order to get all possible moves for black, we need to get all possible moves for white
+ Pseudo code
+-> get all possible moves
+-> generate all possible moves for the opposing player
+-> see if any moves attacks your king
+-> if your king is safe, it is a valid move and add it to a list
+-> return the list of valid moves only
+
+How do we tell python that two moves are equal?
+--> By using overriding and equals method from java.
+
+The move ID will be similar to a Hash Function
+
+
+LEGAL MOVES FOR PAWNS
+Our chess board starts at row 0
+black pawns start at 1
+white pawns start at 6
+For pin and Checks
+   """
+        1. Generate all possible moves
+        2. For each move, make a move
+        3. generate all opponents move
+        4. see if they attack your king 
+        5.if yes not a valid mmove
+        """
+Checks and Pin function:
+
+1.) orthogonally away from king and piece is a rook
+2.) diagonally away from king and piece is a bishop
+3.) 1 square away diagonally from king and piece is a pawn
+4.) any direction and piece is a queen
+5.) any direction 1 square away and piece is a king
